@@ -1,4 +1,4 @@
-from proxypool.tester import Tester
+#from proxypool.tester import Tester
 from proxypool.db import RedisClient
 from proxypool.crawler import Crawler
 from proxypool.setting import *

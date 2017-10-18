@@ -50,7 +50,7 @@ class Tester(object):
             for i in range(0, len(proxies), BATCH_TEST_SIZE):
                 test_proxies = proxies[i:i + BATCH_TEST_SIZE]
                 tasks = [self.test_single_proxy(proxy) for proxy in test_proxies]
-                loop.run_until_complete(asyncio.wait(tasks))
+                asyncio.get_event_loop().run_until_complete(asyncio.wait(tasks))
                 time.sleep(5)
         except Exception as e:
             print('测试器发生错误', e.args)
