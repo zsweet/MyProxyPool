@@ -37,6 +37,15 @@ def get_counts():
     conn = get_conn()
     return str(conn.count())
 
+@app.route('/countavailable')
+def get_countsavailable():
+    """
+    Get the count of proxies
+    :return: 代理池总量
+    """
+    conn = get_conn()
+    return str(conn.countavailable())
+
 
 if __name__ == '__main__':
     app.run()

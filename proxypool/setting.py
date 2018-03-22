@@ -2,8 +2,8 @@
 #数据库
 REDIS_HOST = 'localhost'  # Redis数据库地址
 REDIS_PORT = 6379          # Redis端口
-REDIS_PASSWORD = 'foobared'  # Redis密码，如无填None   foobared
-REDIS_KEY = 'proxies'   #有序集合的键名
+REDIS_PASSWORD = 'zsw'  # Redis密码，如无填None   foobared
+REDIS_KEY = 'myproxies'   #有序集合的键名
 
 # 代理分数
 MAX_SCORE = 100  #最大分数
@@ -26,7 +26,7 @@ TEST_URL = 'http://www.baidu.com'
 
 # API配置
 API_HOST = '127.0.0.1'
-API_PORT = 5555
+API_PORT = 5556
 
 # 各模块开关
 TESTER_ENABLED = True

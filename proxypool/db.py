@@ -78,6 +78,15 @@ class RedisClient(object):
         :return: 数量
         """
         return self.db.zcard(REDIS_KEY)
+
+    def countavailable(self):
+        """
+        获取数量
+        :return: 可用ip数量
+        """
+        return self.db.zcount(REDIS_KEY,MAX_SCORE,MAX_SCORE)
+
+
     
     def all(self):
         """
